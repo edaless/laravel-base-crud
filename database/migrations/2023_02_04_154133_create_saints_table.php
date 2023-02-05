@@ -1,3 +1,5 @@
+<!-- registrazione: 02/02/2023 08:23 -->
+
 <?php
 
 use Illuminate\Database\Migrations\Migration;
