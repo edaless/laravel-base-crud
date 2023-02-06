@@ -17,6 +17,7 @@ return new class extends Migration
     {
         Schema::create('saints', function (Blueprint $table) {
             $table->id();
+
             $table->string('name', 32);
             $table->string('birth_place', 32);
             $table->date('blessing_date');

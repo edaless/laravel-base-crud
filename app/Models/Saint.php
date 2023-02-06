@@ -1,5 +1,6 @@
 <?php
 
+
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -45,4 +46,11 @@ class Saint extends Model
     {
         $this->miracles_number = $miracles_number;
     }
+
+
+
+    public $timestamps = false;
+    // quest'ultima riga è una soluzione di stack overflow, altrimenti all'esecuzione di "php artisan db:seed"
+    // mi da l'errore:
+    // "Column not found: 1054 Unknown column 'updated_at' in 'field list' "
 }
