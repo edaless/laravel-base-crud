@@ -34,4 +34,16 @@ class MainController extends Controller
 
         return redirect()->route('home');
     }
+
+    public function saintCreate()
+    {
+        return view('pages.saintCreate');
+    }
+
+    public function saintStore(Request $request)
+    {
+        $data = $request->all();
+        var_dump($data);
+        die();
+    }
 }
