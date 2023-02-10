@@ -9,6 +9,11 @@
                 <a href="saint/{{$saint->id}}">
                     {{$saint->name}}
                 </a>
+                --------
+                <a href="{{route('saint.destroy',['id'=>$saint->id])}}">
+                    X
+                </a>
+                
             </li>            
         @endforeach
     </ul>
