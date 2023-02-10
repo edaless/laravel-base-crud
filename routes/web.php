@@ -14,7 +14,6 @@ use Illuminate\Support\Facades\Route;
 */
 use App\http\Controllers\MainController;
 
-
 Route::get('/', [MainController::class, 'home'])->name('home');
 Route::get('/saint/show/{id}', [MainController::class, 'saintShow'])->name('saint.show');
 Route::get('/saint/destroy/{id}', [MainController::class, 'saintDestroy'])->name('saint.destroy');

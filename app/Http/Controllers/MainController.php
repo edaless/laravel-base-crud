@@ -44,6 +44,7 @@ class MainController extends Controller
     {
         $data = $request->all();
         var_dump($data);
+        // echo "siii";
         die();
     }
 }
