@@ -10,11 +10,20 @@ class MainController extends Controller
 {
     public function home()
     {
+
         $saints = Saint::all();
         $data = [
             'saints' => $saints
         ];
+
         return view('pages.home', $data);
+
+
+        // lui fa:
+        // $saints = Saint::orderBy('created_at', 'DESC') -> get();        
+        // return view('pages.home', compact('saints'));
+        // per ordinarli dal più recente.
+        // può essere utile
     }
 
 
@@ -42,9 +51,17 @@ class MainController extends Controller
 
     public function saintStore(Request $request)
     {
+
         $data = $request->all();
-        var_dump($data);
-        // echo "siii";
-        die();
+        $saint = new Saint();
+
+        $saint->name = $data['name'];
+        $saint->birth_place = $data['birth_place'];
+        $saint->blessing_date = $data['blessing_date'];
+        $saint->miracles_number = $data['miracles_number'];
+
+        $saint->save();
+
+        return redirect()->route('home');
     }
 }
