@@ -22,6 +22,8 @@ return new class extends Migration
             $table->string('birth_place', 32);
             $table->date('blessing_date');
             $table->integer('miracles_number')->unsigned();
+
+            $table->timestamps();
         });
     }
 

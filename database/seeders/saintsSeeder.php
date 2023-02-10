@@ -18,13 +18,13 @@ class saintsSeeder extends Seeder
     public function run()
     {
 
-        // vecchio modo
+        // vecchio modo FUNZIONANTE!!!
         // $saint = new Saint();
 
         // $saint->name = "name";
         // $saint->birth_place = "birth_place";
-        // // da controllare come si inseriscono le date
-        // $saint->blessing_date = 2020 / 12 / 12;
+        // // le date si inseriscono così:
+        // $saint->blessing_date = "2020-12-12";
         // $saint->miracles_number = 3;
 
 
@@ -34,8 +34,9 @@ class saintsSeeder extends Seeder
 
         //AUTOMATIC FAKE DATA
 
-        $saint = Saint::factory()->count(10)->create();
+        $saint = Saint::factory()->count(100)->create();
 
+        // la mia esperienza è che VUOLE questo "[0]"
         $saint[0]->save();
     }
 }
