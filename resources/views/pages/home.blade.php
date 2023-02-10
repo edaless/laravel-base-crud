@@ -6,12 +6,9 @@
     <ul>
         @foreach ($saints as $saint)
             <li>
-                <b>
-                    {{$saint->name}} <br>
-                </b>
-                {{$saint->birth_place}} <br>
-                {{$saint->blessing_date}} <br>
-                {{$saint->miracles_number}} <br>
+                <a href="saint/{{$saint->id}}">
+                    {{$saint->name}}
+                </a>
             </li>            
         @endforeach
     </ul>

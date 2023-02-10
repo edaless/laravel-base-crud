@@ -16,3 +16,4 @@ use App\http\Controllers\MainController;
 
 
 Route::get('/', [MainController::class, 'home'])->name('home');
+Route::get('/saint/{id}', [MainController::class, 'saintShow'])->name('saint.show');
